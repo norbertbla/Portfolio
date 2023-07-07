@@ -8,7 +8,7 @@
 
 > This portfolio was built using Astro, TypeScript, React and TailwindCSS. It is hosted on Vercel.
 
-### ✨ [Demo](soon)
+### ✨ [Demo](https://portfolio-norbertbla.vercel.app/)
 
 ## Install
 
