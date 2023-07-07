@@ -6,7 +6,7 @@ export const projects: Projects = [
     technologies: ["Astro", "TypeScript", "React", "TailwindCSS", "Shadcn/ui"],
     description:
       "This portfolio was built using Astro It is hosted using Vercel. It is a static site that is generated at build time. It uses TailwindCSS for styling and Shadcn/ui for components.",
-    href: "https://portfolio-norbertbla.vercel.app/",
+    href: "https://github.com/norbertbla/Portfolio",
   },
   {
     title: "Sorting algorithm visualizer",

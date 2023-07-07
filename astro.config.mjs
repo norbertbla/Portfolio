@@ -7,8 +7,7 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://norbertbla.github.io',
-  base: '/Portfolio',
+  site: 'https://portfolio-norbertbla.vercel.app/',
   integrations: [react(), tailwind({
     config: {
       applyBaseStyles: false
