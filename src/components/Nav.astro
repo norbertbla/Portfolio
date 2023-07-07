@@ -1,0 +1,25 @@
+---
+import { NavItems } from "@/components/nav-items";
+import { navConfig } from "@/config/nav";
+---
+
+<div class="outer-wrapper">
+    <div class="inner-wrapper">
+        <nav id="nav">
+            <NavItems items={navConfig} client:load />
+        </nav>
+        <slot />
+    </div>
+</div>
+
+<style>
+    .outer-wrapper {
+        @apply border-b flex justify-center;
+    }
+    .inner-wrapper {
+        @apply flex gap-6 md:gap-10 justify-between p-3 w-xl px-8;
+    }
+    #nav {
+        @apply gap-6 flex;
+    }
+</style>

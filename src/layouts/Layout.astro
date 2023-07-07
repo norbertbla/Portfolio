@@ -1,0 +1,51 @@
+---
+import Nav from "@/components/Nav.astro";
+import { ModeToggle } from "@/components/mode-toggle";
+import Footer from "@/components/Footer.astro";
+import Main from "@/components/Main.astro";
+
+export interface Props {
+	title: string;
+}
+
+export const metadata = {
+	description:
+		"I'm a software engineer based in Poland. I'm passionate about building products that make a positive impact on people's lives. This portfolio is built with Astro, a new static site builder from the creators of Snowpack. It's fast, flexible, and designed for the modern web. ",
+};
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={metadata.description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div id="outer-wrapper">
+			<div id="inner-wrapper">
+				<Nav>
+					<ModeToggle client:load />
+				</Nav>
+				<Main>
+					<slot />
+				</Main>
+				<Footer />
+			</div>
+		</div>
+	</body>
+</html>
+
+<style>
+	#outer-wrapper {
+		@apply flex overflow-x-hidden;
+	}
+	#inner-wrapper {
+		@apply flex flex-col w-full;
+	}
+</style>

@@ -1,0 +1,32 @@
+---
+import { FooterSocialItems } from "@/components/footer-social-items";
+import { socialLinks } from "@/config/social-links";
+---
+
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer__social-icons">
+            <FooterSocialItems items={socialLinks} />
+            <div class="footer__credits">
+                <p class="footer__credits-text">
+                    Created by Norbert Błasczyk 👩‍💻 2023
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        @apply flex flex-row justify-center content-center items-center pt-9 w-full;
+    }
+    .wrapper {
+        @apply w-xl justify-center flex;
+    }
+    .footer__social-icons {
+        @apply grid grid-rows-2 grid-cols-4 gap-4 h-32 w-max items-center justify-center justify-items-center;
+    }
+    .footer__credits {
+        @apply text-gray-500 text-center text-sm col-span-4;
+    }
+</style>

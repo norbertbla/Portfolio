@@ -1,0 +1,42 @@
+---
+import { ProjectSectionItems } from "@/components/projects-section-items";
+import { projects } from "@/config/projects";
+---
+
+<div class="wrapper">
+    <section id="projects" class="project-section">
+        <div class="project-section__block">
+            <h2 class="project-section__heading">Projects</h2>
+            <p class="project-section__paragraph">
+                I've build a couple of projects in the past but only recently
+                started enjoying to contribute to Open Source, currently I'm
+                working on Booksly a book ranking app that uses the improved
+                openlibrary database to sort, rank and filter them.
+            </p>
+        </div>
+        <div class="project-section__element">
+            <ProjectSectionItems items={projects} />
+        </div>
+    </section>
+</div>
+
+<style>
+    .wrapper {
+        @apply w-full flex justify-center;
+    }
+    .project-section {
+        @apply container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24 w-xl;
+    }
+    .project-section__block {
+        @apply mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center px-8;
+    }
+    .project-section__heading {
+        @apply leading-[1.1] text-2xl sm:text-3xl md:text-6xl;
+    }
+    .project-section__paragraph {
+        @apply max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7;
+    }
+    .project-section__element {
+        @apply mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3;
+    }
+</style>
