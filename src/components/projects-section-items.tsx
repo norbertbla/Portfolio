@@ -20,7 +20,10 @@ export function ProjectSectionItems({ items }: ProjectSectionItemsProps) {
               <h3 className="font-bold">{item.title}</h3>
               <div className="inline-block">
                 {item.technologies.map((tag, index) => (
-                  <Badge key={index} className="mr-1">
+                  <Badge
+                    key={index}
+                    className="mr-1 hover:bg-primary cursor-default"
+                  >
                     {tag}
                   </Badge>
                 ))}
