@@ -1,16 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-   content: [
-    './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}',
-    './node_modules/astro-boilerplate-components/**/*.{js,ts,jsx,tsx}',
-  ],
   darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     container: {
       center: true,
@@ -21,13 +12,13 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-				sans: ["InterVariable", "Inter", "sans-serif"],
-			},
+        sans: ["InterVariable", "Inter", "sans-serif"],
+      },
       width: {
-        "sm": "640px",
-        "md": "768px",
-        "lg": "1024px",
-        "xl": "1280px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
         "2xl": "1536px",
       },
       colors: {
@@ -87,4 +78,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

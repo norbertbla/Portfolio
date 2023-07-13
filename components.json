@@ -4,8 +4,8 @@
   "rsc": false,
   "tsx": true,
   "tailwind": {
-    "config": "tailwind.config.js",
-    "css": "app/globals.css",
+    "config": "tailwind.config.cjs",
+    "css": "./src/styles/globals.css",
     "baseColor": "slate",
     "cssVariables": true
   },
@@ -13,14 +13,7 @@
     "components": "@/components",
     "utils": "@/lib/utils",
     "styles": "@/styles",
-    "types": "@/types",
-    "public": "@/public",
-    "app": "@/app",
-    "pages": "@/pages",
-    "hooks": "@/hooks",
-    "layouts": "@/layouts",
-    "config": "@/config",
-    "lib": "@/lib",
-    "assets": "@/assets"
+    "assets": "@/assets",
+    "types": "./types"
   }
 }

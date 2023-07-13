@@ -1,69 +1,43 @@
 ---
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.svg";
+import { headerConfig } from "@/config/header";
+
+const { title, description, button, logo } = headerConfig;
 ---
 
-<header id="header">
-  <div id="header-grid">
-    <div class="content">
-      <section id="section">
-        <div id="content" class="header-content">
-          <h1 class="header-content__title">Norbert Błaszczyk</h1>
-          <p class="header-content__description">
-            Welcome to my web development portfolio! I'm a skilled and dedicated
-            web developer specializing in creating dynamic and engaging
-            websites. With expertise in a variety of programming languages and
-            frameworks, I deliver high-quality solutions tailored to clients
-            unique needs. From front-end design to back-end development, I
-            combine technical proficiency with a keen eye for detail to craft
-            visually appealing and user-friendly websites. Let's collaborate to
-            bring your digital vision to life!
+<header class="w-full flex justify-center px-8">
+  <div
+    class="grid grid-cols-3 gap-4 items-center justify-center mt-10 mb-10 w-xl"
+  >
+    <div
+      class="col-span-3 xl:col-span-2 min-h-[26rem] flex justify-center items-center"
+    >
+      <section class="flex flex-col justify-center items-center h-full">
+        <div class="text-center">
+          <h1
+            class="font-semibold text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-center xl:text-left mb-5"
+          >
+            {title}
+          </h1>
+          <p
+            class="max-w-[42rem] leading-normal text-gray-500 text-lg text-center xl:text-left mb-5"
+          >
+            {description}
           </p>
           <Button>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/norbertbla">GitHub</a
+            <a target="_blank" rel="noreferrer" href={button.href}
+              >{button.title}</a
             >
           </Button>
         </div>
       </section>
     </div>
-    <div class="logo">
-      <img src={logo} alt="Logo" class="header-logo__image" />
+    <div class="col-span-1 hidden xl:block">
+      <img
+        src={logo}
+        alt="Logo"
+        class="w-[266px] h-[266px] select-none dark:filter dark:invert"
+      />
     </div>
   </div>
 </header>
-
-<style>
-  #header {
-    @apply w-full flex justify-center px-8;
-  }
-  #header-grid {
-    @apply grid grid-cols-3 gap-4 items-center justify-center mt-10 mb-10 w-xl;
-  }
-  #section {
-    @apply flex flex-col justify-center items-center h-full;
-  }
-  .content {
-    @apply col-span-3 xl:col-span-2 min-h-[26rem] flex justify-center items-center;
-  }
-  .logo {
-    @apply col-span-1 hidden xl:block;
-  }
-  .header-content {
-    @apply text-center;
-  }
-  .header-content__title {
-    @apply font-semibold text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-center xl:text-left mb-5;
-  }
-  .header-content__description {
-    @apply max-w-[42rem] leading-normal text-gray-500 text-lg text-center xl:text-left mb-5;
-  }
-  .header-content__link a {
-    @apply rounded-full bg-gray-200 px-4 py-2 text-sm font-medium;
-  }
-  .header-logo__image {
-    @apply w-[266px] h-[266px] select-none dark:filter dark:invert;
-  }
-</style>

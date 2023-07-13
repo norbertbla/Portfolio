@@ -1,32 +1,25 @@
 ---
-import { FooterSocialItems } from "@/components/footer-social-items";
+import { FooterSocialItem } from "@/components/footer-social-item";
+import { footerConfig } from "@/config/footer";
 import { socialLinks } from "@/config/social-links";
+import { SocialLink } from "types";
+
+const { name, separator, date } = footerConfig;
 ---
 
-<footer class="footer">
-    <div class="wrapper">
-        <div class="footer__social-icons">
-            <FooterSocialItems items={socialLinks} />
-            <div class="footer__credits">
-                <p class="footer__credits-text">
-                    Created by Norbert Błaszczyk 👩‍💻 2023
-                </p>
-            </div>
-        </div>
+<footer
+  class="flex flex-row justify-center content-center items-center pt-9 w-full"
+>
+  <div class="w-xl justify-center flex">
+    <div
+      class="grid grid-rows-2 grid-cols-4 gap-4 h-32 w-max justify-center justify-items-center"
+    >
+      {socialLinks?.map((item: SocialLink) => <FooterSocialItem item={item} />)}
+      <div class="text-gray-500 text-center text-sm col-span-4">
+        <p>
+          {`Created by ${name} ${separator} ${date}`}
+        </p>
+      </div>
     </div>
+  </div>
 </footer>
-
-<style>
-    .footer {
-        @apply flex flex-row justify-center content-center items-center pt-9 w-full;
-    }
-    .wrapper {
-        @apply w-xl justify-center flex;
-    }
-    .footer__social-icons {
-        @apply grid grid-rows-2 grid-cols-4 gap-4 h-32 w-max justify-center justify-items-center;
-    }
-    .footer__credits {
-        @apply text-gray-500 text-center text-sm col-span-4;
-    }
-</style>

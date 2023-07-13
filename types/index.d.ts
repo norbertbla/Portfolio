@@ -28,3 +28,26 @@ export type Project = {
 };
 
 export type Projects = Project[];
+
+export type HeaderButton = {
+  title: string;
+  href: string;
+};
+
+export type HeaderConfig = {
+  title: string;
+  description: string;
+  button: HeaderButton;
+  logo: string;
+};
+
+export type FooterConfig = {
+  name: string;
+  separator: string;
+  date: string;
+};
+
+export type ProjectsSectionConfig = {
+  title: string;
+  paragraph: string;
+};

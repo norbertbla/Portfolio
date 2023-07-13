@@ -6,13 +6,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import * as React from "react";
 import { NavItem } from "types";
 import { Textarea } from "@/components/ui/textarea";
-import { socialLinks } from "@/config/social-links";
 import { Close } from "@radix-ui/react-dialog";
 
 export interface ContactDialogProps {
@@ -49,6 +46,8 @@ export function ContactDialog({ item }: ContactDialogProps) {
               <a
                 href={"https://linkedin.com/in/norbertbla"}
                 className="underline underline-offset-4"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 www.linkedin.com/in/norbertbla/
               </a>
